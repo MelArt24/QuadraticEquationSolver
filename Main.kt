@@ -1,4 +1,5 @@
 import java.io.File
+import kotlin.math.sqrt
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
@@ -53,7 +54,7 @@ fun fileMode(filePath: String) {
 fun readCoefficient(name: String): Double {
     while (true) {
         print("$name = ")
-        val input = readLine()
+        val input = readlnOrNull()
         val number = input?.toDoubleOrNull()
         if (number != null) return number
         println("Error. Expected a valid real number, got $input instead")
@@ -65,8 +66,8 @@ fun solveEquation(a: Double, b: Double, c: Double) {
     val discriminant = b * b - 4 * a * c
     when {
         discriminant > 0 -> {
-            val x1 = (-b - Math.sqrt(discriminant)) / (2 * a)
-            val x2 = (-b + Math.sqrt(discriminant)) / (2 * a)
+            val x1 = (-b - sqrt(discriminant)) / (2 * a)
+            val x2 = (-b + sqrt(discriminant)) / (2 * a)
             println("There are 2 roots")
             println("x1 = $x1")
             println("x2 = $x2")
