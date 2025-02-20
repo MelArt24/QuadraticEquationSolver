@@ -35,3 +35,4 @@ The file for non-interactive mode should contain three coefficients (a, b, c) se
 
 A revert commit was performed in this project to undo some changes to the files. The commit with hash `6c576e17adb52a55e556cc347e662006cfd986ea` was reverted, which made changes to Main.kt.
 
+[reverted commit](https://github.com/MelArt24/QuadraticEquationSolver/commit/8bc957265d7ce50d8e9b847049795b8beddf56dc)
