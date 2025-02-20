@@ -2,8 +2,6 @@ import java.io.File
 import kotlin.math.sqrt
 import kotlin.system.exitProcess
 
-// this comment is for revert commit
-
 fun main(args: Array<String>) {
     if (args.isEmpty()) {
         interactiveMode()
