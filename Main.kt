@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
     }
 }
 
+// function for interactive mode
 fun interactiveMode() {
     val a = readCoefficient("a")
     if (a == 0.0) {
@@ -21,6 +22,7 @@ fun interactiveMode() {
     solveEquation(a, b, c)
 }
 
+// function for non-interactive (file) mode
 fun fileMode(filePath: String) {
     val file = File(filePath)
     if (!file.exists()) {
@@ -51,6 +53,7 @@ fun fileMode(filePath: String) {
     solveEquation(a, b, c)
 }
 
+// function reads coefficients
 fun readCoefficient(name: String): Double {
     while (true) {
         print("$name = ")
@@ -61,6 +64,7 @@ fun readCoefficient(name: String): Double {
     }
 }
 
+// function solves equation
 fun solveEquation(a: Double, b: Double, c: Double) {
     println("Equation is: ($a) x^2 + ($b) x + ($c) = 0")
     val discriminant = b * b - 4 * a * c
